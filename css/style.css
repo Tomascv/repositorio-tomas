@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------BODY------*/
+body {
+    font-family: 'Titillium Web', sans-serif;
+    }
+/*----grid index----*/
+.grid-area {
+    display: grid;
+    grid-template-areas:
+        "menu menu"
+        "head head"
+        "main main";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+  }
+  /*--fin grid index--*/
+
+/*------fin BODY------*/
+
+
+/*------Footer------*/
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+/*------HEADER------*/
+.header {
+    grid-area: head;
+}
+
+.header_tit {
+    color: #1C388C;
+    text-align: center;
+}
+
+/*------fin HEADER------*/
+
+/*------MAIN--(aplica a index solamente)----*/
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    
+}
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+}
+.principal-article {
+    width: 700px;
+    height: auto;
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.152);
+    border-radius: 2px;
+    transition: 1s;
+}
+
+.principal-article__titulo {
+   color: #1C388C;
+   margin-left: 10px;
+   margin-top: 5px;
+   padding-bottom: 10px
+}
+
+.principal-article__container{
+    object-fit: 100% cover;
+    margin: 10px;
+    
+}
+
+.principal-article__texto { 
+    color: #323a3a;
+    display: inline-block;
+    padding-left: 5px;
+    margin: 0 5px 5px 5px;
+    text-align: justify;
+
+}
+
+.img1 {
+width: 100%;
+height: auto;
+}
+.extlink {
+width: 560px;
+height: 315px;
+}
+
+/*------fin main------*/
+
+
+
+
+/*//////pages:CONTACTO//////*/
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.formcontent {
+    border-radius: 3px;
+    border-color: #1a278c2e;
+    border-width: 0.5px;
+    margin: 20px;
+    padding: 30px;
+}
+
+.contactform {
+    height: 30px;
+    width: 350px;
+    border-radius: 6px;
+    border-color: #0000004d;
+}
+.img-thumbnail {
+ height: 500px;
+ width: 400px;
+}
+
+/*---pages: NOSOTROS-------*/
+.marketing .col-lg-4 {
+    margin-top: 50px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+/*---MEDIA QUERIES----*/
+
+/* Tablet :/ */
+@media screen and (max-width: 768px) {
+    .header {
+            height: auto;
+      }
+    .nav__links {
+          display: flex;
+          justify-content:start;
+          padding: 10px;
+        }
+
+    .nav__link {
+           margin-left: 15px;
+           padding: 0 0 8px 0;
+    }
+
+    .principal,
+    .principal-article {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:baseline;
+      }
+    .principal-article {
+            width: 90%;
+            text-align:justify;
+      }
+
+    .img1,
+    .extlink {
+          width: 95%;
+          height: 20vh;
+      }
+    /*formulario>formcontent>contacform*/
+    .formulario{
+        justify-content: left;
+    }
+
+      .formcontent {
+        border-width: 0px;
+        margin: 20px;
+        padding: 30px;
+        color: #83858e;
+        font-weight: 600 ;
+     }
+    .contactform { /*es el espacio para completar */
+        height: 35px;
+        width: 100vh;
+        border-radius: 20px;
+        border-color: #1c19b51e;
+    }
+     #pie {
+        padding: 5px;
+      }
+}
+
+/*MOBILE*/
+
+@media screen and (max-width: 480px) {
+      /*NAV*/
+    .nav{
+        position:relative;
+    }
+    .nav__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+      }
+
+    .nav__link {
+       margin-bottom: 20px;
+       padding: 0;
+    }
+
+    .principal,
+    .principal-article {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:baseline;
+    }
+/*formulario>formcontent>contacform*/
+    .formcontent {
+        margin: 10px;
+        padding: 20px;
+        color: #83858e;
+        font-size: medium;
+        font-weight: 600 ;
+}
+  .contactform { /*es el espacio para completar */
+        height: 30px;
+        width: 250px;
+        border-color: #1c19b51e;
+}
+      /*PIE*/
+      #pie {
+            font-weight:lighter;
+            color: rgb(142, 142, 143);
+            padding: 1px;
+      }
+}
+
+
+/*--------Transformaciones------------*/
+.nav__link:hover {
+    color: #323a3a;
+}
+
+.principal-article:hover{
+    transform: scale(1.1);
+}
